@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Subtitle Home</title>
+  <style>
+        * {
+            font-family: 'AppleSDGothicNeoSB00';
+            src: url('ags.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+  </style>
+</head>
+
+<body>
+  <script>
+    var langs = {
+        ko: {
+          title: '공지',
+          spectar: '치카사랑 자막 사이트가 사망하였습니다. 자료가 소멸했습니다. 복구 중입니다. 2023년까지 복구가 진행됩니다.',
+          desc: '자막복구를 하고있습니다'
+        },
+        en: {
+          title: 'Notice',
+          spectar: ' Chikalove subtitles site is dead. The data has been destroyed. Recovering. Restoration is underway until 2023.',
+          desc: 'Repairing subtitles...'
+        },
+        ja: {
+          title: 'お知らせ',
+          spectar: ' 千歌愛字幕サイトが死亡しました。材料が消滅しました。復旧中です。 2023年までに復旧が行われます。',
+          desc: '字幕回復をしています'
+        }
+    };
+    
+    if (getLanguage() === 'en-US' || getLanguage() === 'en') {
+      var elem = $('[data-lang]');
+      for(var i = 0; i < elem.length ; i++) {
+        var text = elem.eq(i).attr('data-lang');
+        elem.eq(i).html(text);
+      }
+    }
+    
+    function getLanguage() {
+      return navigator.language || navigator.userLanguage;
+    }
+ </script>
+ <h1 data-lang="title">공지</span>
+ <h3 data-lang="spectar">치카사랑 자막 사이트가 사망하였습니다. 자료가 소멸했습니다. 복구 중입니다. 2023년까지 복구가 진행됩니다.</span>
+ <h3 data-lang="desc">자막복구을 하고 있습니다.</h3>
+</body>
+</html>
