@@ -10,7 +10,63 @@
             font-weight: normal;
             font-style: normal;
         }
-  </style>
+    
+        .letsgo {
+          text-align:center;
+          transform : transtlateX(-50%);
+          -moz-animation: fadein 3s; /* Firefox */
+          -webkit-animation: fadein 3s; /* Safari and Chrome */
+          -o-animation: fadein 3s; /* Opera */
+          animation: fadein 1s;
+        }
+	      
+        @keyframes fadein {
+    		  from {
+        			opacity: 0;
+    		  }
+   	      to {
+       		 opacity: 1;
+    	    }
+        }
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+         }
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @-o-keyframes fadein { /* Opera */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .box-pru {
+          border: 3px solid pink;
+
+          font: bold 1rem sans-serif;
+          margin: 2rem;
+          padding: 0.3rem;
+          outline-offset: 0.5rem;
+          text-align:center;
+          transform : transtlateX(-50%);
+          -moz-animation: fadein 3s; /* Firefox */
+          -webkit-animation: fadein 3s; /* Safari and Chrome */
+          -o-animation: fadein 3s; /* Opera */
+          animation: fadein 1s;
+        }
+    </style> 
 </head>
 
 <body>
@@ -45,8 +101,13 @@
       return navigator.language || navigator.userLanguage;
     }
  </script>
- <h1 data-lang="title">공지</span>
- <h3 data-lang="spectar">치카사랑 자막 사이트가 사망하였습니다. 자료가 소멸했습니다. 복구 중입니다. 2023년까지 복구가 진행됩니다.</span>
- <h3 data-lang="desc">자막복구을 하고 있습니다.</h3>
+ <div class="letsgo">
+  <h1 data-lang="title">공지</h1>
+  <h3 data-lang="spectar">치카사랑 자막 사이트가 사망하였습니다.<br>자료가 소멸했습니다. 복구 중입니다.<br>2023년까지 복구가 진행됩니다.</h3>
+  <h3 data-lang="desc">자막복구을 하고 있습니다.</h3>
+  </div>
+ <div class="box-pru">
+   공지|자막 만들기는 계속됩니다
+ </div>
 </body>
 </html>
